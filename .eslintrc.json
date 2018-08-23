@@ -2,12 +2,9 @@
     "env": {
         "browser": true,
         "commonjs": true,
-        "node": true
+        "node": true,
+        "es6": true
     },
-    "extends": "prettier",
-    "plugins": [
-        "prettier"
-      ],
     "rules": {
         "no-duplicate-case":"error",
         "no-empty":"error",
@@ -32,12 +29,12 @@
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
             "always"
-        ],
-        "prettier/prettier": "error"
+        ]
     }
 }
+
