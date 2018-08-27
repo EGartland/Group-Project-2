@@ -2,10 +2,10 @@ let db = require('../models');
 
 module.exports = function(app) {
   // Load index page
-  app.get('/orders', function(req, res) {
-    db.findAll({}).then(function() {
+  app.get('/', function(req, res) {
+    db.CoffeeOrder.findAll({}).then(function(orders) {
       res.render('index', {
-       
+        orders
       });
     });
   });
