@@ -16,6 +16,14 @@ module.exports = function(app) {
     });    
   });
 
+  app.get('/employees', (req, res) => {
+    res.render('employees');
+  });
+
+  app.get('/employees/add', (req, res) => {
+    res.render('createEmployee');
+  });
+
 
   // Render 404 page for any unmatched routes
   app.get('*', function(req, res) {

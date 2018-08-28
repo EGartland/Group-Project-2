@@ -10,7 +10,9 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-  
+    comments: {
+      type: DataTypes.TEXT
+    },
     completed: {
       type: DataTypes.BOOLEAN,
       default: false,
