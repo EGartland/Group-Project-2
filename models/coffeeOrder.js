@@ -1,3 +1,4 @@
+
 module.exports = function (sequelize, DataTypes) {
   var CoffeeOrder = sequelize.define('CoffeeOrder', {
     id: {
@@ -5,11 +6,17 @@ module.exports = function (sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    name: DataTypes.STRING,
-    order: DataTypes.STRING,
-    comments: DataTypes.TEXT,
-    department: DataTypes.STRING
+    order: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+  
+    completed: {
+      type: DataTypes.BOOLEAN,
+      default: false,
+    }
 
   });
   return CoffeeOrder;
 };
+
