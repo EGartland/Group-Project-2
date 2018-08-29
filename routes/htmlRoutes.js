@@ -13,6 +13,7 @@ module.exports = function(app) {
   app.get('/orders', (req, res) => {
     db.CoffeeOrder.findAll({}).then(function(orders) {
       res.render('orders', { orders });
+      console.log(orders);
     });    
   });
 
