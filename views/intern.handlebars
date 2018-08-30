@@ -1,3 +1,5 @@
+<div id='internContainer'>
+
 <h2>Add New Employee</h2>
 
 <form action="../api/employees" method="POST">
@@ -8,7 +10,9 @@
 <h2>Employees</h2>
 <ul id="employee-list">
 {{#each employees }}
-    <li><span>{{ this.name }}</span><button class="btn delete" id="{{ this.id }}">X</button></li>
+    <li id='employeeStyle'><span>{{ this.name }}</span><button class="btn delete" id="{{ this.id }}">X</button></li>
 {{/each }}
 </ul>
+
+</div>
 

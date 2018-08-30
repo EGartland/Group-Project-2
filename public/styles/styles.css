@@ -2,3 +2,56 @@
   line-height: 2.5;
 }
 
+h1 {
+  text-align: center;
+}
+.container {
+  width: 80%;
+ 
+}
+
+.input-field {
+  padding: 1em;
+  margin: 1em;
+  width: 90%;
+}
+
+.form-group {
+  padding: .8em;
+  margin: .8em;
+  width: 90%;
+}
+
+#submit {
+  margin: 15px;
+}
+
+#internContainer {
+  display: inline-grid;
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  justify-content: center;
+}
+
+#employeeStyle {
+  padding: 5px;
+}
+
+.delete {
+  margin: 5px;
+}
+
+#orderPage {
+  display: inline-grid;
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  justify-content: center;
+}
+
+#createOrder label {
+  font-weight: bolder;
+  color: black;
+
+}

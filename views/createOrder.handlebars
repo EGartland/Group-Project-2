@@ -1,11 +1,12 @@
-<div class="conatiner">
+<div class="container">
     <h1>Create New Order</h1>
     <form class="clearfix mb-4" action="../api/orders" method="POST" id="createOrder">
-
+   
+    <label  class="input-field" for="name">Name</label>
         <div class="input-field">
-            {{!-- <label for="name">Name</label> --}}
+            
             <select name="EmployeeId" class="browser-default" id="name">
-                <option value="" disabled>Please select your name</option>
+                <option value="" disabled selected>Please select your name</option>
                 {{#each employees }}
                 <option value="{{ this.id }}">{{ this.name }}</option>
                 {{/each }}
@@ -25,9 +26,12 @@
         <div class="form-group">
             <label for="depts">Departments</label>
             <select name="department" class="browser-default" id="depts">
-                <option value="" disabled>Please select a Department</option>
+                <option value="" disabled selected>Please select a Department</option>
                 <option value="Accounting">Accounting</option>
-                <option value="Software Engineer">Engineer</option>
+                <option value="Engineering">Engineering</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="Human Resources">Human Resources</option>
             </select>
         </div>
         
