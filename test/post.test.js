@@ -12,6 +12,7 @@ var request;
 describe('POST /api/orders', function() {
   // Before each test begins, create a new request server for testing
   // & delete all examples from the db
+
   beforeEach(function() {
     request = chai.request(server);
     return db.sequelize.sync({ force: true });
@@ -39,6 +40,7 @@ describe('POST /api/orders', function() {
         expect(responseStatus).to.equal(200);
 
         expect(responseBody)
+
           .to.be.an('object');
         //   .that.includes(reqBody);
 
@@ -47,3 +49,4 @@ describe('POST /api/orders', function() {
       });
   });
 });
+

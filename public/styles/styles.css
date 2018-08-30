@@ -1,4 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto"
+}
+
 .list-group-item {
   line-height: 2.5;
 }
 
+h1 {
+  text-align: center;
+}
+.container {
+  width: 80%;
+ 
+}
+
+.input-field {
+  padding: 1em;
+  margin: 1em;
+  width: 90%;
+}
+
+.form-group {
+  padding: .8em;
+  margin: .8em;
+  width: 90%;
+}
+
+#submit {
+  margin: 15px;
+}
+
+#internContainer {
+  display: inline-grid;
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  justify-content: center;
+}
+
+#employeeStyle {
+  padding: 5px;
+}
+
+.delete {
+  margin: 0px 1em;
+  height: 14px;
+  width: 5px;
+
+}
+
+#orderPage {
+  display: inline-grid;
+  padding: 10px;
+  margin: 10px;
+  width: 90%;
+  justify-content: center;
+}
+
+#createOrder label {
+  font-weight: bolder;
+  color: black;
+}
+
+
+a {
+  padding: 10px;
+ 
+}
