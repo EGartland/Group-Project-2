@@ -3,7 +3,7 @@
 <ul id="order-list" class="list-group">
     {{#each orders}}
     <li data-id="{{this.id}}" class="list-group-item">
-        <span>{{ this.name }}</span> | <span>{{ this.order }}</span> | <span>{{ this.comments }}</span> | <span>{{ this.department }}</span>
+        <span>{{ this.EmployeeId }}</span> | <span>{{ this.order }}</span> | <span>{{ this.comments }}</span> | <span>{{ this.department }}</span>
         <button class="btn btn-danger float-right delete">ｘ</button>
     </li>
     {{/each}}

@@ -14,6 +14,7 @@ module.exports = function(app) {
   app.post('/api/orders', function(req, res) {
     db.CoffeeOrder.create(req.body)
       .then(function() {
+
         res.render('index', { msg: 'Order created successfully!'});
       });
   });
@@ -38,15 +39,16 @@ module.exports = function(app) {
   app.post('/api/employees', function(req, res) {
     db.Employee.create(req.body)
       .then(function() {
-        res.render('index', { msg: 'Employee created successfully!'});
+        res.redirect('../../intern');
       });
   });
 
   // Delete an employee by id
   app.delete('/api/employees/:id', function(req, res) {
     db.Employee.destroy({ where: { id: req.params.id } })
-      .then(function(employee) {
-        res.json(employee);
+      .then(function(results) {
+        // res.redirect('../../intern');
+        res.json(results);
       });
   });
 };
