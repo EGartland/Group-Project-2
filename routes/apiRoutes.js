@@ -13,9 +13,9 @@ module.exports = function(app) {
   // Create a new orders
   app.post('/api/orders', function(req, res) {
     db.CoffeeOrder.create(req.body)
-      .then(function() {
-
-        res.render('index', { msg: 'Order created successfully!'});
+      .then(function(order) {
+		    res.json(order);
+        // res.render('index', { msg: 'Order created successfully!'});
       });
   });
 
