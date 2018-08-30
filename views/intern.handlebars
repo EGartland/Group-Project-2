@@ -1,0 +1,14 @@
+<h2>Add New Employee</h2>
+
+<form action="../api/employees" method="POST">
+    <input type="text" id="employeeName" name="name" required>
+    <button>Submit</button>
+</form>
+
+<h2>Employees</h2>
+<ul id="employee-list">
+{{#each employees }}
+    <li><span>{{ this.name }}</span><button class="btn delete" id="{{ this.id }}">X</button></li>
+{{/each }}
+</ul>
+

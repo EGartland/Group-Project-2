@@ -2,9 +2,14 @@
     <h1>Create New Order</h1>
     <form class="clearfix mb-4" action="../api/orders" method="POST" id="createOrder">
 
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" class="form-control" aria-describedby="name" placeholder="John Doe">
+        <div class="input-field">
+            {{!-- <label for="name">Name</label> --}}
+            <select name="EmployeeId" class="browser-default" id="name">
+                <option value="" disabled>Please select your name</option>
+                {{#each employees }}
+                <option value="{{ this.id }}">{{ this.name }}</option>
+                {{/each }}
+            </select>
         </div>
 
         <div class="form-group">
@@ -19,7 +24,7 @@
 
         <div class="form-group">
             <label for="depts">Departments</label>
-            <select name="department" id="depts">
+            <select name="department" class="browser-default" id="depts">
                 <option value="" disabled>Please select a Department</option>
                 <option value="Accounting">Accounting</option>
                 <option value="Software Engineer">Engineer</option>

@@ -1,5 +1,12 @@
 // Get references to page elements
 let $orders = $('#order-list');
+$employees = $('#employee-list');
+
+// Initializes Materialize Select Input Fields
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('select');
+  M.FormSelect.init(elems);
+});
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -24,6 +31,12 @@ var API = {
       url: 'api/orders/' + id,
       type: 'DELETE'
     });
+  },
+  deleteEmployee: function(id) {
+    return $.ajax({
+      url: 'api/employees/' + id,
+      type: 'DELETE'
+    });
   }
 };
 
@@ -39,5 +52,11 @@ var handleDeleteBtnClick = function() {
   });
 };
 
+let deleteEmployee = function() {
+  let id = $(this).attr('id');
+  API.deleteEmployee(id)
+    .then(() => window.location.reload());
+};
 // Add event listeners to the submit and delete buttons
 $orders.on('click', '.delete', handleDeleteBtnClick);
+$employees.on('click', '.delete', deleteEmployee);

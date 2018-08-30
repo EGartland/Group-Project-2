@@ -7,7 +7,9 @@ module.exports = function(app) {
   });
 
   app.get('/orders/create', (req, res) => {
-    res.render('createOrder');
+    db.Employee.findAll({}).then((employees) => {
+      res.render('createOrder', { employees });
+    });
   });
 
   app.get('/orders', (req, res) => {
@@ -15,6 +17,13 @@ module.exports = function(app) {
       res.render('orders', { orders });
       console.log(orders);
     });    
+  });
+
+  app.get('/intern', (req, res) => {
+    db.Employee.findAll({})
+      .then( employees => {
+        res.render('intern', { employees });
+      });
   });
 
   app.get('/employees', (req, res) => {
