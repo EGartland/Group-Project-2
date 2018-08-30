@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto"
+}
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -39,7 +46,10 @@ h1 {
 }
 
 .delete {
-  margin: 5px;
+  margin: 0px 1em;
+  height: 14px;
+  width: 5px;
+
 }
 
 #orderPage {
@@ -53,5 +63,10 @@ h1 {
 #createOrder label {
   font-weight: bolder;
   color: black;
+}
 
+
+a {
+  padding: 10px;
+ 
 }
