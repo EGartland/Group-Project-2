@@ -8,7 +8,7 @@
   },
   "test": {
     "username": "root",
-    "password": "testtest",
+    "password": null,
     "database": "coffeedb",
     "host": "localhost",
     "dialect": "mysql",
