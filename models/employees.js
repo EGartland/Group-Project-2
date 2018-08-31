@@ -12,11 +12,14 @@ module.exports = function (sequelize, DataTypes) {
     favorite: {
       type: DataTypes.STRING
     },
-    
+    department: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   });
   Employee.associate = function(models) {
 
-    Employee.hasMany(models.CoffeeOrder, {as: 'employeeId'});
+    Employee.hasMany(models.CoffeeOrder);
   };
   return Employee;
 };

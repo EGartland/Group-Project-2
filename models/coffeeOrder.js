@@ -1,4 +1,3 @@
-
 module.exports = function (sequelize, DataTypes) {
   var CoffeeOrder = sequelize.define('CoffeeOrder', {
     id: {
@@ -15,10 +14,12 @@ module.exports = function (sequelize, DataTypes) {
     },
     completed: {
       type: DataTypes.BOOLEAN,
-      default: false,
+      defaultValue: false
     }
 
   });
+  CoffeeOrder.associate = function(models) {
+	  CoffeeOrder.belongsTo(models.Employee);
+  };
   return CoffeeOrder;
 };
-

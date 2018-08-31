@@ -13,10 +13,17 @@ module.exports = function(app) {
   // Create a new orders
   app.post('/api/orders', function(req, res) {
     db.CoffeeOrder.create(req.body)
-      .then(function() {
-
-        res.render('index', { msg: 'Order created successfully!'});
-      });
+      .then( order => res.json(order) );
+  });
+  
+  app.put('/api/orders/:id', (req, res) => {
+	  db.CoffeeOrder.update({
+		  completed: true
+	  }, {
+      where: {
+        id: req.params.id
+      }
+    }).then( order => res.json(order) );
   });
 
   // Delete an orders by id
@@ -38,8 +45,8 @@ module.exports = function(app) {
   // Create a new employee
   app.post('/api/employees', function(req, res) {
     db.Employee.create(req.body)
-      .then(function() {
-        res.redirect('../../intern');
+      .then(function(employee) {
+        res.json(employee);
       });
   });
 
@@ -47,7 +54,6 @@ module.exports = function(app) {
   app.delete('/api/employees/:id', function(req, res) {
     db.Employee.destroy({ where: { id: req.params.id } })
       .then(function(results) {
-        // res.redirect('../../intern');
         res.json(results);
       });
   });

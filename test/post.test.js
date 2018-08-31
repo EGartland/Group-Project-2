@@ -40,10 +40,8 @@ describe('POST /api/orders', function() {
         expect(responseStatus).to.equal(200);
 
         expect(responseBody)
-
-          .to.be.an('object');
-        //   .that.includes(reqBody);
-
+          .to.be.an('object')
+		  .that.includes(reqBody);
         // The `done` function is used to end any asynchronous tests
         done();
       });

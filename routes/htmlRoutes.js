@@ -13,16 +13,25 @@ module.exports = function(app) {
   });
 
   app.get('/orders', (req, res) => {
-    db.CoffeeOrder.findAll({}).then(function(orders) {
+    db.CoffeeOrder.findAll({include: [{
+      model: db.Employee
+    }]}).then(function(orders) {
       res.render('orders', { orders });
-      console.log(orders);
     });    
   });
 
   app.get('/intern', (req, res) => {
-    db.Employee.findAll({})
-      .then( employees => {
-        res.render('intern', { employees });
+    // Find all employees and Orders, perhapse we can use Promise.all() here...
+    db.CoffeeOrder.findAll({
+      include: [{
+        model: db.Employee
+      }]
+    })
+      .then(function(orders) {
+        db.Employee.findAll({})
+          .then( employees => {
+            res.render('intern', { orders, employees });
+          });
       });
   });
 

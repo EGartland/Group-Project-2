@@ -1,11 +1,12 @@
 <div class="container">
-    <h1>Create New Order</h1>
-    <form class="clearfix mb-4" action="../api/orders" method="POST" id="createOrder">
+    <h3>Create New Order</h1>
+	{{#if employees }}
+    <form class="clearfix mb-4" id="createOrder">
    
-    <label  class="input-field" for="name">Name</label>
+    	<label  class="input-field" for="name">Name</label>
         <div class="input-field">
             
-            <select name="EmployeeId" class="browser-default" id="name">
+            <select name="EmployeeId" class="browser-default" id="name" required>
                 <option value="" disabled selected>Please select your name</option>
                 {{#each employees }}
                 <option value="{{ this.id }}">{{ this.name }}</option>
@@ -15,7 +16,7 @@
 
         <div class="form-group">
             <label for="order">Order</label>
-            <input type="text" id="order" name="order" class="form-control" aria-describedby="order" placeholder="Mocha Latte">
+            <input type="text" id="order" name="order" class="form-control" aria-describedby="order" placeholder="Mocha Latte" required>
         </div>
 
         <div class="form-group">
@@ -23,18 +24,9 @@
             <textarea class="form-control" id="comments" name="comments" aria-describedby="comments" placeholder="2 Sugars"></textarea>
         </div>
 
-        <div class="form-group">
-            <label for="depts">Departments</label>
-            <select name="department" class="browser-default" id="depts">
-                <option value="" disabled selected>Please select a Department</option>
-                <option value="Accounting">Accounting</option>
-                <option value="Engineering">Engineering</option>
-                <option value="IT">IT</option>
-                <option value="Finance">Finance</option>
-                <option value="Human Resources">Human Resources</option>
-            </select>
-        </div>
-        
-        <button class="btn waves-effect waves-light" type="submit" id="submit" name="action">Submit</button>
+        <button class="btn waves-effect waves-light" type="submit" id="orderSubmit">Submit</button>
     </form>
+	{{else }}
+	<p>Please add an Employee First! <a href="/intern">Create Employee</a></p>
+	{{/if }}
 </div>
