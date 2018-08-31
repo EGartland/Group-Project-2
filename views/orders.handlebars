@@ -1,11 +1,35 @@
 <div id="orderPage">
-<h3>Orders:</h3>
-<ul id="order-list" class="list-group">
-    {{#each orders}}
-    <li data-id="{{this.id}}" class="list-group-item">
-        <span>{{ this.EmployeeId }}</span> | <span>{{ this.order }}</span> | <span>{{ this.comments }}</span> | <span>{{ this.department }}</span>
-        <button class="btn btn-danger float-right delete">ｘ</button>
-    </li>
-    {{/each}}
-</ul>
+	<h3>Orders</h3>
+	{{#if orders }}
+	<h4>Pending Orders:</h4>
+	<ul id="order-list" class="order-list list-group">
+		{{#each orders }}
+		{{#unless this.completed }}
+		<li data-id="{{this.id}}" class="list-group-item">
+			<span>{{ this.Employee.name }}</span> | 
+			<span>{{ this.order }}</span> | 
+			<span>{{ this.comments }}</span> | 
+			<span>{{ this.Employee.department }}</span>
+			<button class="btn btn-danger float-right fulfill">ｘ</button>
+		</li>
+		{{/unless }}
+		{{/each }}
+	</ul>
+	<h4>Completed Orders:</h4>
+	<ul class="order-list list-group">
+	{{#each orders }}
+		{{#if this.completed }}
+		<li data-id="{{this.id}}" class="list-group-item">
+			<span>{{ this.Employee.name }}</span> |  
+			<span>{{ this.order }}</span> | 
+			<span>{{ this.comments }}</span> | 
+			<span>{{ this.Employee.department }}</span>
+			<button class="btn float-right delete">ｘ</button>
+		</li>
+		{{/if }}
+	{{/each }}
+	</ul>
+	{{else }}
+	<p>No Orders To display! <a href="orders/create">Create Order!</a></p>
+	{{/if }}
 </div>
