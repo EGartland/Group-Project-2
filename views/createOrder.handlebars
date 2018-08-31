@@ -9,7 +9,7 @@
             <select name="EmployeeId" class="browser-default" id="name" required>
                 <option value="" disabled selected>Please select your name</option>
                 {{#each employees }}
-                <option value="{{ this.id }}">{{ this.name }}</option>
+                <option value="{{ this.id }}">{{ this.name }}  {{ this.lastName}}</option>
                 {{/each }}
             </select>
         </div>

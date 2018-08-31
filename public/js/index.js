@@ -80,10 +80,13 @@ function addEmployee(e) {
   e.preventDefault();
   let employee = {
     name: $('#employeeName').val(),
+    lastName: $('#employeeLast').val(),
+    
     department: $('#depts').val()
   };
   API.createEmployee(employee)
     .then(() => window.location.reload());
+  console.log(lastName);
 }
 
 // console.log(addEmployee);

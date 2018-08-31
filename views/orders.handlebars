@@ -6,7 +6,7 @@
 		{{#each orders }}
 		{{#unless this.completed }}
 		<li data-id="{{this.id}}" class="list-group-item">
-			<span>{{ this.Employee.name }}</span> | 
+			<span>{{ this.Employee.name }}  {{this.Employee.lastName}}</span> | 
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
