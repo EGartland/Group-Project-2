@@ -12,7 +12,7 @@ body {
 
 #navBarStyle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 24px;
   color: #a1887f;
 }
 
@@ -22,4 +22,10 @@ body {
   
 .btn-small {
   background-color: #C18265;
+}
+
+@media screen and (max-width:640px) {
+  #navBarStyle{
+    font-size: 16px;
+  }
 }
