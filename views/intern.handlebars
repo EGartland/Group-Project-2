@@ -79,8 +79,8 @@
 					<li data-id="{{this.id}}" class="list-group-item">
 						<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
 						<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> |  
-						<span>{{ this.order }}</span> | 
-						<span>{{ this.comments }}</span> | 
+						<span>{{ this.order }}</span> | {{#if this.comments}}
+						<span>{{ this.comments }}</span> | {{/if }}
 						<span>{{ this.Employee.department }}</span>
 					</li>
 					{{/if }}
