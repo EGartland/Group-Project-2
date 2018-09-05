@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
-  box-sizing: border-box;
-  font-family: "Roboto"
+body {
+  background-color: #C18265;
 }
 
 .list-group-item {
@@ -18,7 +17,6 @@ h1 {
   margin: 10px;
   width: 90%;
   justify-content: center;
- 
 }
 
 .input-field {
@@ -31,6 +29,7 @@ h1 {
   padding: .8em;
   margin: .8em;
   width: 90%;
+  color: black;
 }
 
 #submit {
@@ -72,5 +71,14 @@ h1 {
 
 a {
   padding: 10px;
- 
 }
+
+#navBarStyle {
+  font-family: 'Montserrat', sans-serif;
+  color: #a1887f;
+}
+
+
+  .colorBlack {
+    color:black;
+  }

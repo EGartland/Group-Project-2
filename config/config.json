@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "testtest",
+    "password": "testing123",
     "database": "coffeedb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "testing123",
+    "database": "coffeedb",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
@@ -19,3 +19,6 @@
     "dialect": "mysql"
   }
 }
+
+
+
