@@ -32,7 +32,7 @@ Our thanks to:
 * **Reggie Brown** - *TA* - [LinkedIn](https://www.linkedin.com/in/reggie-brown/)
 * **Nick Simmons** - *TA* - [LinkedIn](https://www.linkedin.com/in/nick-simmons-ph-d-7b483550/)
 
-function drawTable() {
+// function drawTable() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'Name');
   data.addColumn('number', 'Salary');
@@ -324,4 +324,4 @@ function drawTable() {
   google.visualization.events.addListener(table, 'select', function() {
     var row = table.getSelection()[0].row;
     alert('You selected ' + data.getValue(row, 0));
-  });
+  }); //
