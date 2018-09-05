@@ -17,11 +17,11 @@
 		{{#each orders }}
 		{{#unless this.completed }}
 		<li data-id="{{this.id}}" class="list-group-item">
+			<a class="btn-floating btn-small fulfill"><i class="material-icons">clear</i></a>
 			<span>{{ this.Employee.name }}  {{this.Employee.lastName}}</span> | 
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
-			<a class="btn-floating btn-small fulfill"><i class="material-icons">clear</i></a>
 		</li>
 		{{/unless }}
 		{{/each }}
@@ -31,11 +31,11 @@
 	{{#each orders }}
 		{{#if this.completed }}
 		<li data-id="{{this.id}}" class="list-group-item">
+			<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
 			<span>{{ this.Employee.name }}</span> |  
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
-			<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
 		</li>
 		{{/if }}
 	{{/each }}
