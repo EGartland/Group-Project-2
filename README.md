@@ -1,7 +1,7 @@
 
-# Get My Coffee
+# Get Me My Coffee
 
-An app created to help alleviate the need for debate and indecision about where a group of friends or coworkers should have lunch or drinks, etc.
+An application created to help alleviate the complicated process of compiling and filling a coffee order for a group of peers or coworkers.
 
 Created as the second group project for the Summer 2018 cohort of the University of Kansas' Coding Bootcamp.
 
