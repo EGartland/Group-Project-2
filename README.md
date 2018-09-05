@@ -7,6 +7,10 @@ Created as the second group project for the Summer 2018 cohort of the University
 
 [Get Me My Coffee](https://getmemycoffee.herokuapp.com/)
 
+#### Accompanying Presentation
+
+[Google Slides - Get Me My Coffee](https://docs.google.com/presentation/d/e/2PACX-1vQt0GrWBJc3R7_u-a6nt1P37fAJ9ey9YBisi3h-MbdkEbo1J3OaGq_bzNkjlbHlgFla7jjqzSlZp15Q/pub?start=false&loop=true&delayms=60000)
+
 ## Built With
 
 * [Node.js](https://nodejs.org/en/about/) - Javascript runtime network
