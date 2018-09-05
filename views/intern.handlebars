@@ -4,87 +4,94 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+	<title>Intern Page</title>
 </head>
 <body>
 	
+	<div class="container">
+		<div class="row">
+
+			<div class="col s12 m6 l4" id='internContainer'>
+				<h5>Add New Employee</h5>
+					<form id="createEmployee">
+						<div class="form-group">
+							<label for="First Name" class="color-brown">First Name</label>
+							<input type="text" id="employeeName" name="name" required>
+						</div>
+						<div class="form-group">
+							<label for="Last Name" class="color-brown">Last Name</label>
+							<input type="text" id="employeeLast" name="lastName" required>
+						</div>
+						<div class="form-group">
+							<label for="depts" class="color-brown">Departments</label>
+							<select name="department" id="depts" required>
+								<option value="" disabled selected>Please select a Department</option>
+								<option value="Accounting">Accounting</option>
+								<option value="Engineering">Engineering</option>
+								<option value="IT">IT</option>
+								<option value="Finance">Finance</option>
+								<option value="Human Resources">Human Resources</option>
+							</select>
+						</div>
+						<button class="btn" type="submit">Submit</button>
+					</form>
+			</div>
+
+			<div class="col s12 m3 l4" id="employeeDiv">
+				<h5>Employees</h5>
+				{{#if employees }}
+				<ul id="employee-list">
+				{{#each employees }}
+					<li id='employeeStyle'><a class="btn-small btn-floating delete" id="{{ this.id }}"><i class="material-icons">clear</i></a><span>{{ this.name }} {{this.lastName}}</span></li>
+				{{/each }}
+				</ul>
+				{{else }}
+				<p>No employees to display!</p>
+				{{/if }}
+			</div>
 
 
-<div id='internContainer'>
+			<div class="col s12 m3 l4" id="ordersDiv">
+				<h5>Orders</h5>
+				{{#if orders }}
+				<h6>Pending Orders:</h6>
+				<ul id="order-list" class="order-list list-group">
+					{{#each orders }}
+					{{#unless this.completed }}
+					<li data-id="{{this.id}}" class="list-group-item">
+						<a class="btn-floating btn-small fulfill"><i class="material-icons">clear</i></a>
+						<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> | 
+						<span>{{ this.order }}</span> | 
+						<span>{{ this.comments }}</span> | 
+						<span>{{ this.Employee.department }}</span>
+						
+						
 
-	<h3>Add New Employee</h2>
+					</li>
+					{{/unless }}
+					{{/each }}
+				</ul>
 
-	<form id="createEmployee">
-		<div class="form-group">
-			<label for="First Name">First Name</label>
-			<input placeholder="First Name" type="text" id="employeeName" name="name" required>
+				<h6>Completed Orders:</h6>
+				<ul class="order-list list-group">
+				{{#each orders }}
+					{{#if this.completed }}
+					<li data-id="{{this.id}}" class="list-group-item">
+						<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
+						<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> |  
+						<span>{{ this.order }}</span> | 
+						<span>{{ this.comments }}</span> | 
+						<span>{{ this.Employee.department }}</span>
+					</li>
+					{{/if }}
+				{{/each }}
+				</ul>
+				{{else }}
+				<p>No Orders To display! <a href="orders/create">Create Order!</a></p>
+				{{/if }}
+			</div>
 		</div>
-		<div class="form-group">
-			<label for="First Name">Last Name</label>
-			<input placeholder="Last Name" type="text" id="employeeLast" name="lastName" required>
-		</div>
-		<div class="form-group">
-            <label for="depts">Departments</label>
-            <select name="department" class="browser-default" id="depts" required>
-                <option value="" disabled selected>Please select a Department</option>
-                <option value="Accounting">Accounting</option>
-                <option value="Engineering">Engineering</option>
-                <option value="IT">IT</option>
-                <option value="Finance">Finance</option>
-                <option value="Human Resources">Human Resources</option>
-            </select>
-        </div>
-		<button class="btn" type="submit">Submit</button>
-	</form>
-
-	<h3>Employees</h3>
-	{{#if employees }}
-	<ul id="employee-list">
-	{{#each employees }}
-		<li id='employeeStyle'><span>{{ this.name }} {{this.lastName}}</span><button class="btn delete" id="{{ this.id }}">X</button></li>
-	{{/each }}
-	</ul>
-	{{else }}
-	<p>No employees to display!</p>
-	{{/if }}
-
-	<h3>Orders</h3>
-	{{#if orders }}
-
-	<h4>Pending Orders:</h4>
-	<ul id="order-list" class="order-list list-group">
-		{{#each orders }}
-		{{#unless this.completed }}
-		<li data-id="{{this.id}}" class="list-group-item">
-			<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> | 
-			<span>{{ this.order }}</span> | 
-			<span>{{ this.comments }}</span> | 
-			<span>{{ this.Employee.department }}</span>
-			<button class="btn btn-danger float-right fulfill">ｘ</button>
-		</li>
-		{{/unless }}
-		{{/each }}
-	</ul>
-
-	<h4>Completed Orders:</h4>
-	<ul class="order-list list-group">
-	{{#each orders }}
-		{{#if this.completed }}
-		<li data-id="{{this.id}}" class="list-group-item">
-			<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> |  
-			<span>{{ this.order }}</span> | 
-			<span>{{ this.comments }}</span> | 
-			<span>{{ this.Employee.department }}</span>
-			<button class="btn float-right delete">ｘ</button>
-		</li>
-		{{/if }}
-	{{/each }}
-	</ul>
-	{{else }}
-	<p>No Orders To display! <a href="orders/create">Create Order!</a></p>
-	{{/if }}
-</div>
-
+	</div>
 </body>
 </html>
 

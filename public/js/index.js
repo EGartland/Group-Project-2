@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
 // Get references to page elements
 let $orders = $('.order-list');
 let $employees = $('#employee-list');
@@ -103,7 +107,7 @@ function submitOrder(e) {
     order: $('#order').val(),
     comments: $('#comments').val()
   };
-  API.saveOrder(order).then(() => window.location = '../../');
+  API.saveOrder(order).then(() => window.location = '../orders/');
 }
 
 $orderForm.on('submit', submitOrder);

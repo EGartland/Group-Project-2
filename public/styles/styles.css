@@ -1,76 +1,64 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-* {
-  box-sizing: border-box;
-  font-family: "Roboto"
+body {
+  background-color:#F2E9E5;
+  font-size: 18px;
+  color: #3e2723;
 }
 
-.list-group-item {
-  line-height: 2.5;
-}
-
-h1 {
-  text-align: center;
-}
-.container {
-  display: inline-grid;
-  padding: 10px;
-  margin: 10px;
-  width: 90%;
-  justify-content: center;
- 
-}
-
-.input-field {
-  padding: 1em;
-  margin: 1em;
-  width: 90%;
-}
-
-.form-group {
-  padding: .8em;
-  margin: .8em;
-  width: 90%;
-}
-
-#submit {
-  margin: 15px;
-}
-
-#internContainer {
-  display: inline-grid;
-  padding: 10px;
-  margin: 10px;
-  width: 90%;
-  justify-content: center;
-}
-
-#employeeStyle {
-  padding: 5px;
-}
-
-.delete {
-  margin: 0px 1em;
-  height: 14px;
-  width: 5px;
-
-}
-
-#orderPage {
-  display: inline-grid;
-  padding: 10px;
-  margin: 10px;
-  width: 90%;
-  justify-content: center;
+.color-brown {
+  color: #3e2723;
+  font-size: 14px;
 }
 
 #createOrder label {
   font-weight: bolder;
-  color: black;
+  color: #3e2723;
 }
 
+h3, h5, h6 {
+font-family: 'Bitter', serif;
+}
 
-a {
-  padding: 10px;
- 
+#navBarStyle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  color: #C18265;
+}
+
+#welcomeDiv {
+  background-color: #3e2723;
+  color: #F2E9E5;
+  padding-top: 1px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+}
+
+.navList {
+  color: #C18265;
+}
+  
+.btn-small, .btn {
+  background-color: #C18265;
+  color:#F2E9E5;
+}
+
+@media screen and (max-width:1110px) {
+  #navBarStyle{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #navBarStyle{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width:530px) {
+  #navBarStyle{
+    font-size: 16px;
+  }
 }

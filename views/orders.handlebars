@@ -8,34 +8,34 @@
 </head>
 <body>
 	
-<div id="orderContainer">
-	<div id="orderPage">
-	<h3>Orders</h3>
+<div class="container">
+	<div class="row">
+	<div class="col s12 m6 l6" id="orderContainer orderPage">	
 	{{#if orders }}
-	<h4>Pending Orders:</h4>
+	<h5>Pending Orders:</h5>
 	<ul id="order-list" class="order-list list-group">
 		{{#each orders }}
 		{{#unless this.completed }}
 		<li data-id="{{this.id}}" class="list-group-item">
+			<a class="btn-floating btn-small fulfill"><i class="material-icons">clear</i></a>
 			<span>{{ this.Employee.name }}  {{this.Employee.lastName}}</span> | 
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
-			<button class="btn btn-danger float-right fulfill">ｘ</button>
 		</li>
 		{{/unless }}
 		{{/each }}
 	</ul>
-	<h4>Completed Orders:</h4>
+	<h5>Completed Orders:</h5>
 	<ul class="order-list list-group">
 	{{#each orders }}
 		{{#if this.completed }}
 		<li data-id="{{this.id}}" class="list-group-item">
+			<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
 			<span>{{ this.Employee.name }}</span> |  
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
-			<button class="btn float-right delete">ｘ</button>
 		</li>
 		{{/if }}
 	{{/each }}
@@ -43,8 +43,11 @@
 	{{else }}
 	<p>No Orders To display! <a href="orders/create">Create Order!</a></p>
 	{{/if }}
+	</div>
+	<div class="col s12 m6 l6"></div>
+	</div>
 </div>
-</div>
+	
 
 </body>
 </html>
