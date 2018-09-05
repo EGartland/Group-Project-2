@@ -29,6 +29,8 @@ Created as the second group project for the Summer 2018 cohort of the University
 
 * [mySQL](https://www.mysql.com/) - Database Used for Development
 
+* [Travis CI](https://docs.travis-ci.com/) - Test and deploy code
+
 ## Authors
 
 * **Tanner Barnum** - [LinkedIn](https://www.linkedin.com/in/tanner-barnum-0b9808162/)
