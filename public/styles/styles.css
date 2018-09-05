@@ -2,25 +2,31 @@
 
 body {
   background-color:#F2E9E5;
+  font-size: 18px;
+  color: #3e2723;
 }
 
+.color-brown {
+  color: #3e2723;
+  font-size: 14px;
+}
 
 #createOrder label {
   font-weight: bolder;
-  color: black;
+  color: #3e2723;
 }
 
 #navBarStyle {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
-  color: #a1887f;
+  color: #C18265;
 }
 
 .colorBlack {
     color:black;
   }
   
-.btn-small {
+.btn-small, .btn {
   background-color: #C18265;
 }
 

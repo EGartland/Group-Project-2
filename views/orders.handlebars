@@ -7,9 +7,8 @@
 	<title>Document</title>
 </head>
 <body>
-	
-<div id="orderContainer">
-	<div id="orderPage">
+
+<div class="container" id="orderContainer orderPage">	
 	<h3>Orders</h3>
 	{{#if orders }}
 	<h4>Pending Orders:</h4>
@@ -21,7 +20,7 @@
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
-			<button class="btn btn-danger float-right fulfill">ｘ</button>
+			<a class="btn-floating btn-small fulfill"><i class="material-icons">clear</i></a>
 		</li>
 		{{/unless }}
 		{{/each }}
@@ -35,7 +34,7 @@
 			<span>{{ this.order }}</span> | 
 			<span>{{ this.comments }}</span> | 
 			<span>{{ this.Employee.department }}</span>
-			<button class="btn float-right delete">ｘ</button>
+			<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
 		</li>
 		{{/if }}
 	{{/each }}
@@ -44,7 +43,7 @@
 	<p>No Orders To display! <a href="orders/create">Create Order!</a></p>
 	{{/if }}
 </div>
-</div>
+	
 
 </body>
 </html>
