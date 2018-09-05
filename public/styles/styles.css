@@ -16,7 +16,7 @@ body {
   color: #3e2723;
 }
 
-h5, h6 {
+h3, h5, h6 {
 font-family: 'Bitter', serif;
 }
 
@@ -26,18 +26,26 @@ font-family: 'Bitter', serif;
   color: #C18265;
 }
 
-.orderList {
-  max-width: 300px;
+#welcomeDiv {
+  background-color: #3e2723;
+  color: #F2E9E5;
+  padding-top: 1px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
 }
+
 .navList {
   color: #C18265;
 }
   
 .btn-small, .btn {
   background-color: #C18265;
+  color:#F2E9E5;
 }
 
-@media screen and (max-width:1070px) {
+@media screen and (max-width:1110px) {
   #navBarStyle{
     font-size: 30px;
   }
@@ -49,7 +57,7 @@ font-family: 'Bitter', serif;
   }
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:530px) {
   #navBarStyle{
     font-size: 16px;
   }
