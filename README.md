@@ -1,6 +1,8 @@
 
 # Get Me My Coffee
 
+[![Build Status](https://travis-ci.com/EGartland/Group-Project-2.svg?branch=master)](https://travis-ci.com/EGartland/Group-Project-2)
+
 An application created to help alleviate the complicated process of compiling and filling a coffee order for a group of peers or coworkers.
 
 Created as the second group project for the Summer 2018 cohort of the University of Kansas' Coding Bootcamp.
