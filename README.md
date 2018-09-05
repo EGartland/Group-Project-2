@@ -1,3 +1,4 @@
+
 # Get My Coffee
 
 An app created to help alleviate the need for debate and indecision about where a group of friends or coworkers should have lunch or drinks, etc.
@@ -324,4 +325,3 @@ function drawTable() {
     var row = table.getSelection()[0].row;
     alert('You selected ' + data.getValue(row, 0));
   });
-}
