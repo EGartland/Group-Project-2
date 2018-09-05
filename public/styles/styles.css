@@ -40,9 +40,14 @@ font-family: 'Bitter', serif;
   color: #C18265;
 }
 
-#listStyle {
+
+.listStyle {
   background-color:#C18265;
   color: #3e2723;
+}
+
+.listStyle:hover {
+  color: #F2A37F;
 }
   
 .btn-small, .btn {
