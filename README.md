@@ -45,6 +45,19 @@ Our thanks to:
 
 ## Operation
 
+1) Clone this repository to your local system.
+
+2) Open terminal.
+
+3) Navigate to the appropriate folder, and install all required packages ('mysql', 'express', 'body-parser', 'express-handlebars', 'method-override' and 'require'). 
+
+4) Run the command *npm i* to install node modules.
+
+5) Then run node server.js, open your web browser, and navigate to your *localhost*.
+
+6) Or simply navigate to the deployed application on Heroku at https://getmemycoffee.herokuapp.com/.
+
+
 ## Functionality
 
 #### Create an Employee
