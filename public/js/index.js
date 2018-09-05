@@ -107,7 +107,7 @@ function submitOrder(e) {
     order: $('#order').val(),
     comments: $('#comments').val()
   };
-  API.saveOrder(order).then(() => window.location = '../../');
+  API.saveOrder(order).then(() => window.location = '../orders/');
 }
 
 $orderForm.on('submit', submitOrder);
