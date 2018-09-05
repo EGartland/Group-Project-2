@@ -42,3 +42,12 @@ Our thanks to:
 * **Reggie Brown** - *TA* - [LinkedIn](https://www.linkedin.com/in/reggie-brown/)
 
 * **Nick Simmons** - *TA* - [LinkedIn](https://www.linkedin.com/in/nick-simmons-ph-d-7b483550/)
+
+## Operation
+
+## Functionality
+
+#### Create an Employee
+
+![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/styles/CreateEmployee.jpg)
+
