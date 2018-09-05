@@ -39,6 +39,11 @@ font-family: 'Bitter', serif;
 .navList {
   color: #C18265;
 }
+
+#listStyle {
+  background-color:#C18265;
+  color: #3e2723;
+}
   
 .btn-small, .btn {
   background-color: #C18265;
