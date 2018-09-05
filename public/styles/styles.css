@@ -16,21 +16,40 @@ body {
   color: #3e2723;
 }
 
+h5, h6 {
+font-family: 'Bitter', serif;
+}
+
 #navBarStyle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 36px;
   color: #C18265;
 }
 
-.colorBlack {
-    color:black;
-  }
+.orderList {
+  max-width: 300px;
+}
+.navList {
+  color: #C18265;
+}
   
 .btn-small, .btn {
   background-color: #C18265;
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:1070px) {
+  #navBarStyle{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #navBarStyle{
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width:550px) {
   #navBarStyle{
     font-size: 16px;
   }

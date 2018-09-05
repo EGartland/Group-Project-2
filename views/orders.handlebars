@@ -7,11 +7,12 @@
 	<title>Document</title>
 </head>
 <body>
-
-<div class="container" id="orderContainer orderPage">	
-	<h3>Orders</h3>
+	
+<div class="container">
+	<div class="row">
+	<div class="col s12 m6 l6" id="orderContainer orderPage">	
 	{{#if orders }}
-	<h4>Pending Orders:</h4>
+	<h5>Pending Orders:</h5>
 	<ul id="order-list" class="order-list list-group">
 		{{#each orders }}
 		{{#unless this.completed }}
@@ -25,7 +26,7 @@
 		{{/unless }}
 		{{/each }}
 	</ul>
-	<h4>Completed Orders:</h4>
+	<h5>Completed Orders:</h5>
 	<ul class="order-list list-group">
 	{{#each orders }}
 		{{#if this.completed }}
@@ -42,6 +43,9 @@
 	{{else }}
 	<p>No Orders To display! <a href="orders/create">Create Order!</a></p>
 	{{/if }}
+	</div>
+	<div class="col s12 m6 l6"></div>
+	</div>
 </div>
 	
 
