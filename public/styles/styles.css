@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body {
-  background-color: #C18265;
+  background-color:#F2E9E5;
 }
 
 .list-group-item {
@@ -78,7 +78,10 @@ a {
   color: #a1887f;
 }
 
-
-  .colorBlack {
+.colorBlack {
     color:black;
   }
+  
+.btn {
+  background-color: #3e2723;
+}
