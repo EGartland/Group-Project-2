@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col s12 m4 l4" id='internContainer'>
+			<div class="col s12 m6 l4" id='internContainer'>
 				<h5>Add New Employee</h5>
 					<form id="createEmployee">
 						<div class="form-group">
@@ -36,34 +36,36 @@
 					</form>
 			</div>
 
-			<div class="col s12 m4 l4" id="employeeDiv">
+			<div class="col s12 m3 l4" id="employeeDiv">
 				<h5>Employees</h5>
 				{{#if employees }}
 				<ul id="employee-list">
 				{{#each employees }}
-					<li id='employeeStyle'><span>{{ this.name }} {{this.lastName}}</span><button class="btn delete" id="{{ this.id }}">X</button></li>
+					<li id='employeeStyle'><a class="btn-small btn-floating delete" id="{{ this.id }}"><i class="material-icons">clear</i></a><span>{{ this.name }} {{this.lastName}}</span></li>
 				{{/each }}
 				</ul>
 				{{else }}
 				<p>No employees to display!</p>
 				{{/if }}
-
-				<h5>Orders</h5>
-				{{#if orders }}
 			</div>
 
 
-			<div class="col s12 m4 l4" id="ordersDiv">
+			<div class="col s12 m3 l4" id="ordersDiv">
+				<h5>Orders</h5>
+				{{#if orders }}
 				<h6>Pending Orders:</h6>
 				<ul id="order-list" class="order-list list-group">
 					{{#each orders }}
 					{{#unless this.completed }}
 					<li data-id="{{this.id}}" class="list-group-item">
+						<a class="btn-floating btn-small fulfill"><i class="material-icons">clear</i></a>
 						<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> | 
 						<span>{{ this.order }}</span> | 
 						<span>{{ this.comments }}</span> | 
 						<span>{{ this.Employee.department }}</span>
-						<button class="btn btn-danger float-right fulfill">ｘ</button>
+						
+						
+
 					</li>
 					{{/unless }}
 					{{/each }}
@@ -74,11 +76,11 @@
 				{{#each orders }}
 					{{#if this.completed }}
 					<li data-id="{{this.id}}" class="list-group-item">
+						<a class="btn-floating btn-small delete"><i class="material-icons">clear</i></a>
 						<span>{{ this.Employee.name }} {{ this.Employee.lastName }}</span> |  
 						<span>{{ this.order }}</span> | 
 						<span>{{ this.comments }}</span> | 
 						<span>{{ this.Employee.department }}</span>
-						<button class="btn float-right delete">ｘ</button>
 					</li>
 					{{/if }}
 				{{/each }}

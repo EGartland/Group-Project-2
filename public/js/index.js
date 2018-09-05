@@ -1,3 +1,7 @@
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
 // Get references to page elements
 let $orders = $('.order-list');
 let $employees = $('#employee-list');
