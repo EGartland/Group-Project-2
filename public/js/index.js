@@ -83,10 +83,9 @@ function fulfillOrder() {
 function addEmployee(e) {
   e.preventDefault();
   let employee = {
-    name: $('#employeeName').val(),
-    lastName: $('#employeeLast').val(),
-    
-    department: $('#depts').val()
+    name: $('#employeeName').val().trim(),
+    lastName: $('#employeeLast').val().trim(),
+    department: $('#depts').val().trim()
   };
   API.createEmployee(employee)
     .then(() => window.location.reload());
@@ -103,9 +102,9 @@ function deleteEmployee() {
 function submitOrder(e) {
   e.preventDefault();
   let order = {
-    EmployeeId: $('#name').val(),
-    order: $('#order').val(),
-    comments: $('#comments').val()
+    EmployeeId: $('#name').val().trim(),
+    order: $('#order').val().trim(),
+    comments: $('#comments').val().trim()
   };
   API.saveOrder(order).then(() => window.location = '../orders/');
 }
