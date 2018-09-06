@@ -70,12 +70,12 @@ Our thanks to:
 
 #### Create an Employee
 
-![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/styles/CreateEmployee.gif)
+![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/img/CreateEmployee.gif)
 
 #### Place an Order
 
-![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/styles/PlaceOrder.gif)
+![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/img/PlaceOrder.gif)
 
 #### View/Fill Orders
 
-![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/styles/Courier.gif)
+![Output Sample](https://github.com/EGartland/Group-Project-2/blob/master/public/img/Courier.gif)
