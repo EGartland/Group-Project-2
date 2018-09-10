@@ -33,13 +33,13 @@ Created as the second group project for the Summer 2018 cohort of the University
 
 ## Authors
 
-* **Tanner Barnum** - [LinkedIn](https://www.linkedin.com/in/tanner-barnum-0b9808162/)
+* **Tanner Barnum** - [LinkedIn](https://www.linkedin.com/in/tanner-barnum/)
 
-* **Edward Gartland** - [LinkedIn](https://www.linkedin.com/in/edward-gartland-839006163/)
+* **Edward Gartland** - [LinkedIn](https://www.linkedin.com/in/edward-gartland/)
 
-* **Jesse Harrah** - [LinkedIn](https://www.linkedin.com/in/jesse-harrah-b6b7b2152/)
+* **Jesse Harrah** - [LinkedIn](https://www.linkedin.com/in/jesse-harrah/)
 
-* **Savannah Niemeyer** - [LinkedIn](https://www.linkedin.com/in/savannah-niemeyer-20579874/)
+* **Savannah Niemeyer** - [LinkedIn](https://www.linkedin.com/in/savannah-niemeyer/)
 
 ## Acknowledgments
 
